@@ -6,7 +6,11 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: ['https://adam03034.github.io', 'http://localhost:3000'],
+    methods: ['GET', 'POST'],
+    credentials: true
+  }));
 app.use(express.json());
 
 // Email transporter setup
