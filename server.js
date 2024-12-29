@@ -11,6 +11,7 @@ app.use(cors({
     methods: ['GET', 'POST'],
     credentials: true
   }));
+  
 app.use(express.json());
 
 // Email transporter setup
